@@ -1,0 +1,21 @@
+# ── CRITICAL CREDENTIAL PROTECTION ──
+.env
+*.env
+
+# ── LOGS & USER SESSIONS ──
+logs/
+*.log
+
+# ── LOCAL ARTIFACTS & VECTOR STORAGE ──
+chroma_mcdonalds/
+
+
+# ── ENVIRONMENT CLUTTER & VENV ──
+Nutri/
+__pycache__/
+*.pyc
+
+# ── EDITOR AND IDE CONFIGURATIONS ──
+.vscode/
+.idea/
+.DS_Store
