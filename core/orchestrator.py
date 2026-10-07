@@ -53,11 +53,19 @@ def agent(user_input, session_id=None):
 
     # 2. ORCHESTRATE INTENT BARRIER (Blocks out-of-scope/general knowledge queries)
     clean_q = user_input.strip().lower()
+
+    # Direct routing bypass configurations for basic app triggers
+    if any(word in clean_q for word in ["hello", "hi", "hey", "how are you", "how r u"]):
+        return "Hello! I am your McDonald's India AI Assistant. How can I help you explore our menu metrics?"
+
+    # Check routing decision first using your model weights
+    decision = route_question(user_input)
+
+    # Guardrail Check: If it defaults to RAG but text has zero menu relevance
     is_general_q = True
     
     # Check if the query is relevant to the dataset
-    menu_keywords = ["menu", "burger", "wrap", "mccafe", "beverage", "dessert", "calorie", "protein", "fat", "sodium", "carb", "sugar", "item", "food", "drink", "eat", "price"]
-    
+    menu_keywords = ["menu", "burger", "wrap", "mccafe", "beverage", "dessert", "sauce", "dip", "fries", "puff", "muffin", "mcmuffin", "coffee", "shake", "smoothie", "fudge", "cone", "oreo", "chicken", "veg", "calorie", "protein", "fat", "sodium", "carb", "sugar", "item", "food", "drink", "eat", "price"]
     # Check keyword lists first before triggering deep routing logic
     if any(kw in clean_q for kw in menu_keywords) or route_question(user_input) in ["SQL", "BOTH"]:
         is_general_q = False

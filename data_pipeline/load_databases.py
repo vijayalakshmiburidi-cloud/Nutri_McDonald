@@ -17,7 +17,7 @@ def format_sql_headers(df):
         'protein__g_': 'protein_g',
         'total_fat__g_': 'total_fat_g',
         'sodium__mg_': 'sodium_mg',
-        'total_carbohydrate__g_': 'total_carbs_g', # Maps 'Total carbohydrate (g)' to 'total_carbs_g'
+        'total_carbohydrate_g': 'total_carbs_g', # Maps 'Total carbohydrate (g)' to 'total_carbs_g'
         'total_sugars__g_': 'total_sugars_g'
     }
     

@@ -21,7 +21,7 @@ def resolve_context_with_memory(question, conversation_history):
     history_str = ""
     for i, turn in enumerate(conversation_history[-2:], 1):
         history_str += (
-            f"Turn {i} - User: {turn['question']}\n"
+            f"Turn {i} - User: {turn['original_question']}\n"
             f"Agent: {turn['answer'][:150]}...\n"
         )
 

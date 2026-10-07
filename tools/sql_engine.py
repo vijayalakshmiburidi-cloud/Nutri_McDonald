@@ -23,7 +23,8 @@ Schema: {schema}
 Rules:
 1. Raw SQL only — no markdown no backticks
 2. Use LIKE '%%text%%' not '%text%'
-3. Include menu_item in SELECT
+3. For general selection queries, always include menu_item in the SELECT clause.
+4. CRITICAL: For aggregation/count queries (e.g., 'how many', 'total', 'count'), select ONLY the aggregation function (e.g., SELECT COUNT(*) FROM menu...) and do NOT include menu_item unless explicitly asked to group by it.
 4. LIMIT 5 unless count query
 Question: {question}
 SQL:"""

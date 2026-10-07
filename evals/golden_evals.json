@@ -1,0 +1,215 @@
+{
+  "test_suite_name": "McDonald's India Assistant Evaluation Suite",
+  "test_cases": [
+    {
+      "id": "Q01",
+      "category": "SQL",
+      "question": "Which burger has the lowest calories?",
+      "expected_target_item": "Mc Egg Burger for Happy Meal",
+      "ground_truth_metric": "282.98 kCal"
+    },
+    {
+      "id": "Q02",
+      "category": "SQL",
+      "question": "List all items under 100 calories from the McCafe Menu.",
+      "expected_target_item": "L1 Coffee, Americano (S), Americano (R), Americano (L), Moroccan Mint Green Tea, Strawberry Green Tea",
+      "ground_truth_metric": "All items under 100 kCal"
+    },
+    {
+      "id": "Q03",
+      "category": "SQL",
+      "question": "How many items are there in the Gourmet Menu category?",
+      "expected_target_item": "Gourmet Menu Count",
+      "ground_truth_metric": "11 items"
+    },
+    {
+      "id": "Q04",
+      "category": "SQL",
+      "question": "Which wrap contains the highest protein content?",
+      "expected_target_item": "Spicy Chicken Wrap",
+      "ground_truth_metric": "23.74 g protein"
+    },
+    {
+      "id": "Q05",
+      "category": "SQL",
+      "question": "What is the total fat value inside Veg Maharaja Mac?",
+      "expected_target_item": "Veg Maharaja Mac",
+      "ground_truth_metric": "37.94 g total fat"
+    },
+    {
+      "id": "Q06",
+      "category": "SQL",
+      "question": "Which item contains the highest sodium level on the menu?",
+      "expected_target_item": "Ghee Rice with Mc Spicy Fried Chicken 1 pc",
+      "ground_truth_metric": "2399.49 mg sodium"
+    },
+    {
+      "id": "Q07",
+      "category": "SQL",
+      "question": "Compare total sugars between Strawberry Shake and Chocolate Shake.",
+      "expected_target_item": "Strawberry Shake vs Chocolate Shake",
+      "ground_truth_metric": "37.42 g vs 37.78 g total sugars"
+    },
+    {
+      "id": "Q08",
+      "category": "SQL",
+      "question": "Which item has the lowest sodium count on the whole menu?",
+      "expected_target_item": "Espresso, L1 Coffee, Coke Zero",
+      "ground_truth_metric": "0.0 mg - 0.32 mg range"
+    },
+    {
+      "id": "Q09",
+      "category": "SQL",
+      "question": "List the menu categories available in this dataset.",
+      "expected_target_item": "Unique Menu Categories",
+      "ground_truth_metric": "Regular Menu, Breakfast Menu, McCafe Menu, Desserts Menu, Gourmet Menu, Beverages Menu, Condiments Menu"
+    },
+    {
+      "id": "Q10",
+      "category": "SQL",
+      "question": "What is the carbohydrate content of Large Fries?",
+      "expected_target_item": "Large Fries",
+      "ground_truth_metric": "54.16 g total carbohydrate"
+    },
+    {
+      "id": "Q11",
+      "category": "RAG",
+      "question": "Tell me about McVeggie Burger options.",
+      "expected_target_item": "McVeggie Burger",
+      "ground_truth_metric": "Regular menu burger, 402.05 kCal, features vegetable patty."
+    },
+    {
+      "id": "Q12",
+      "category": "RAG",
+      "question": "Describe the composition of Pizza Puff.",
+      "expected_target_item": "Pizza Puff",
+      "ground_truth_metric": "Regular Menu snack item containing 228.21 kCal and 5.45g protein."
+    },
+    {
+      "id": "Q13",
+      "category": "RAG",
+      "question": "What beverage choices are available under the McCafe Menu?",
+      "expected_target_item": "McCafe Menu options",
+      "ground_truth_metric": "Includes hot coffees, frappes, smoothies, coolers, and iced teas."
+    },
+    {
+      "id": "Q14",
+      "category": "RAG",
+      "question": "Recommend a high protein chicken choice from the Gourmet Menu.",
+      "expected_target_item": "Chunky Chipotle American Burger Chicken",
+      "ground_truth_metric": "Provides 39.47 g protein."
+    },
+    {
+      "id": "Q15",
+      "category": "RAG",
+      "question": "What is the difference between Hot Chocolate and Premium Dark Hot Chocolate?",
+      "expected_target_item": "Hot Chocolate options",
+      "ground_truth_metric": "Varying sugar, cocoa weights, and calorie metrics."
+    },
+    {
+      "id": "Q16",
+      "category": "RAG",
+      "question": "Suggest a zero calorie drink alternative.",
+      "expected_target_item": "Vedica Natural Mineral Water / Coke Zero Can",
+      "ground_truth_metric": "Contains 0.00 kCal energy."
+    },
+    {
+      "id": "Q17",
+      "category": "RAG",
+      "question": "What items are included in the Condiments Menu category?",
+      "expected_target_item": "Condiments Menu items",
+      "ground_truth_metric": "Dipping sauces, ketchup sachets, syrups, and cheese slices."
+    },
+    {
+      "id": "Q18",
+      "category": "RAG",
+      "question": "Explain the nutrition profile of McAloo Tikki Burger.",
+      "expected_target_item": "McAloo Tikki Burger",
+      "ground_truth_metric": "339.52 kCal, 8.5g protein, 11.31g total fat."
+    },
+    {
+      "id": "Q19",
+      "category": "RAG",
+      "question": "What soft serve ice cream choices are available?",
+      "expected_target_item": "Soft serve items",
+      "ground_truth_metric": "Soft serve cone, McSwirl ChocoDip, hot fudge, and strawberry toppings."
+    },
+    {
+      "id": "Q20",
+      "category": "RAG",
+      "question": "Tell me about the McCafe tea variants.",
+      "expected_target_item": "McCafe Teas",
+      "ground_truth_metric": "English Breakfast, Moroccan Mint Green Tea, and Strawberry Green Tea options."
+    },
+    {
+      "id": "Q21",
+      "category": "GUARDRAIL",
+      "question": "Who is the CEO of McDonald's India?",
+      "expected_target_item": "Blocked Prompt",
+      "ground_truth_metric": "I do not have that information in my current menu dataset."
+    },
+    {
+      "id": "Q22",
+      "category": "GUARDRAIL",
+      "question": "Can you generate a python program to calculate averages?",
+      "expected_target_item": "Blocked Prompt",
+      "ground_truth_metric": "I do not have that information in my current menu dataset."
+    },
+    {
+      "id": "Q23",
+      "category": "GUARDRAIL",
+      "question": "What is the weather outside today?",
+      "expected_target_item": "Blocked Prompt",
+      "ground_truth_metric": "I do not have that information in my current menu dataset."
+    },
+    {
+      "id": "Q24",
+      "category": "GUARDRAIL",
+      "question": "Write a short essay on global warming trends.",
+      "expected_target_item": "Blocked Prompt",
+      "ground_truth_metric": "I do not have that information in my current menu dataset."
+    },
+    {
+      "id": "Q25",
+      "category": "GUARDRAIL",
+      "question": "Who owns the franchise rights for McDonald's?",
+      "expected_target_item": "Blocked Prompt",
+      "ground_truth_metric": "I do not have that information in my current menu dataset."
+    },
+    {
+      "id": "Q26",
+      "category": "EDGE_CASE",
+      "question": "hello how are you",
+      "expected_target_item": "UI Greeting",
+      "ground_truth_metric": "Bypasses RAG to return a friendly conversational greeting."
+    },
+    {
+      "id": "Q27",
+      "category": "EDGE_CASE",
+      "question": "k bye thank you",
+      "expected_target_item": "UI Exit",
+      "ground_truth_metric": "Bypasses RAG to return a clean exit statement."
+    },
+    {
+      "id": "Q28",
+      "category": "EDGE_CASE",
+      "question": "   ",
+      "expected_target_item": "UI Blank Guard",
+      "ground_truth_metric": "Returns clean instruction to type a menu question."
+    },
+    {
+      "id": "Q29",
+      "category": "EDGE_CASE",
+      "question": "Tell me about McSpicy Paneer Burger. How many calories does it have?",
+      "expected_target_item": "BOTH Route Trigger",
+      "ground_truth_metric": "Triggers BOTH route, fetches 652.76 kCal via SQL, formats via RAG."
+    },
+    {
+      "id": "Q30",
+      "category": "EDGE_CASE",
+      "question": "Which items are under Gourmet Menu? Give me all items.",
+      "expected_target_item": "SQL List Route",
+      "ground_truth_metric": "Generates clear SQL query to list all 11 items matching category."
+    }
+  ]
+}
