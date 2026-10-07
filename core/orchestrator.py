@@ -51,12 +51,16 @@ def agent(user_input, session_id=None):
     start_input  = session_tokens["input"]
     start_output = session_tokens["output"]
 
-    # 2. ORCHESTRATE INTENT BARRIER (Blocks out-of-scope/general knowledge queries)
+    # Clean general inputs
     clean_q = user_input.strip().lower()
-
-    # Direct routing bypass configurations for basic app triggers
-    if any(word in clean_q for word in ["hello", "hi", "hey", "how are you", "how r u"]):
-        return "Hello! I am your McDonald's India AI Assistant. How can I help you explore our menu metrics?"
+    
+    # FIX: Use an exact word boundary or pattern split list to stop "hi" breaking "which"
+    greeting_words = ["hello", "hi", "hey", "how are you", "how r u"]
+    split_words = clean_q.split() # Splits the text into a real list of individual words
+    
+    # Check if ANY exact word matches your greeting collection
+    if any(greet in split_words for greet in greeting_words) or clean_q in ["hi", "hello", "hey"]:
+        return "Hello! I am your McDonald's India AI Assistant. How can I help you explore our menu metrics today?"
 
     # Check routing decision first using your model weights
     decision = route_question(user_input)
